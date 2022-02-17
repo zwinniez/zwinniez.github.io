@@ -1,0 +1,66 @@
+
+body {
+    background-color:#0a4e32da;
+    color: #ffffffce;
+    
+}
+
+#author {
+    
+    font-size: 20px;
+    font-family:'Optima', sans-serif;
+    text-align: right;
+}
+
+.header {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    
+    font-family:'Optima', sans-serif;
+    font-size: 35px;
+    color: #ffffffce;
+    text-align: left;
+
+    margin-top: 20px ;
+    margin-left: 40px;
+
+
+    padding: 15px 20px 15px 40px;
+    border-top: 5px solid #82ecc077;
+    border-bottom: 5px solid #82ecc077;
+}
+
+.content-container {
+    padding: 15px 30px;
+    margin-top: 250px;
+    
+    height: 600px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.content-scroll-page {
+    display: flex;
+    height: 70%;
+    font-family: 'Optima', sans-serif;
+    font-size: 25px;
+    color: #ffffffce;
+    text-align: left;
+    
+    padding-left: 50px;
+    border-left: 5px dotted #82ecc077;
+}
+
+
+
+a:link, a:visited {
+    color: #ffffffce;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: #7ad6c2ce;
+}
