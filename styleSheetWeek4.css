@@ -14,14 +14,14 @@ body {
 
 .left_eye {
     position: absolute;
-    top: 5%;
-    left: 20%;
+    top: 40px;
+    left: 300px;
 }
 
 .right_eye {
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 40px;
+    left: 1000px;
 }
 
 .nose {
