@@ -6,6 +6,11 @@ body {
     color: #ffffffce;
 }
 
+.name {
+    color: #7ad6c2ce;
+    font-size: 140px;
+}
+
 
 .left_eye {
     position: absolute;
