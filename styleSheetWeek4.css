@@ -1,0 +1,82 @@
+
+body {
+    background-image: url("seattle.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffffce;
+}
+
+
+.left_eye {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+}
+
+.right_eye {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+}
+
+.nose {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 50%;
+    height: auto;
+
+}
+
+.top_left_mouth {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: rotate(320deg);
+}
+
+.middle_left_mouth {
+    position: absolute;
+    top: 55%;
+    left: 21%;
+    transform: rotate(305deg);
+}
+
+.bottom_left_mouth {
+    position: absolute;
+    top: 66%;
+    left: 34%;
+    transform: rotate(295deg);
+
+}
+
+.top_right_mouth {
+    position: absolute;
+    top: 40%;
+    left: 71%;
+    transform: rotate(40deg);
+}
+
+.middle_right_mouth {
+    position: absolute;
+    top: 55%;
+    left:60%;
+    transform: rotate(55deg);
+}
+
+.bottom_right_mouth {
+    position: absolute;
+    top: 66%;
+    left: 48%;
+    transform: rotate(65deg);
+}
+
+a:link, a:visited {
+    color: #ffffffce;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: #7ad6c2ce;
+}
