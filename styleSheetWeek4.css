@@ -37,50 +37,50 @@ body {
 
 .top_left_mouth {
     position: absolute;
-    top: 40%;
-    left: 10%;
-    max-width: 60px;
+    top: 500px;
+    left: 400px;
+    max-width: 100px;
     transform: rotate(320deg);
 }
 
 .middle_left_mouth {
     position: absolute;
-    top: 55%;
-    left: 21%;
-    max-width: 60px;
+    top: 570px;
+    left: 490px;
+    max-width: 100px;
     transform: rotate(305deg);
 }
 
 .bottom_left_mouth {
     position: absolute;
-    top: 66%;
-    left: 34%;
-    max-width: 60px;
+    top: 620px;
+    left: 590px;
+    max-width: 100px;
     transform: rotate(295deg);
 
 }
 
 .top_right_mouth {
     position: absolute;
-    top: 40%;
-    left: 71%;
-    max-width: 60px;
+    top: 500px;
+    left: 900px;
+    max-width: 100px;
     transform: rotate(40deg);
 }
 
 .middle_right_mouth {
     position: absolute;
-    top: 55%;
-    left:60%;
-    max-width: 60px;
+    top: 570px;
+    left:800px;
+    max-width: 100px;
     transform: rotate(55deg);
 }
 
 .bottom_right_mouth {
     position: absolute;
-    top: 66%;
-    left: 48%;
-    max-width: 60px;
+    top: 630px;
+    left: 700px;
+    max-width: 100px;
     transform: rotate(65deg);
 }
 
