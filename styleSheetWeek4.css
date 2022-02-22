@@ -3,7 +3,7 @@ body {
     /* background-image: url("seattle.jpg");
     background-size: cover;
     background-repeat: no-repeat; */
-    color: #ffffffce;
+    background-color: #b0f3d7ce;
 }
 
 .name {
@@ -16,12 +16,15 @@ body {
     position: absolute;
     top: 40px;
     left: 300px;
+    max-width: 100px;
+
 }
 
 .right_eye {
     position: absolute;
     top: 40px;
     left: 1000px;
+    max-width: 100px;
 }
 
 .nose {
