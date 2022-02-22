@@ -28,9 +28,9 @@ body {
 
 .nose {
     position: absolute;
-    top: 40%;
-    left: 40%;
-    max-width: 80px;
+    top: 200px;
+    left: 550px;
+    max-width: 60px;
     height: auto;
 
 }
@@ -39,7 +39,7 @@ body {
     position: absolute;
     top: 40%;
     left: 10%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(320deg);
 }
 
@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 55%;
     left: 21%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(305deg);
 }
 
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 66%;
     left: 34%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(295deg);
 
 }
@@ -64,7 +64,7 @@ body {
     position: absolute;
     top: 40%;
     left: 71%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(40deg);
 }
 
@@ -72,7 +72,7 @@ body {
     position: absolute;
     top: 55%;
     left:60%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(55deg);
 }
 
@@ -80,7 +80,7 @@ body {
     position: absolute;
     top: 66%;
     left: 48%;
-    max-width: 80px;
+    max-width: 60px;
     transform: rotate(65deg);
 }
 
