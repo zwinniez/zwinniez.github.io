@@ -16,6 +16,7 @@ body {
     position: absolute;
     top: 5%;
     left: 20%;
+    max-width: 50px;
 }
 
 .right_eye {
