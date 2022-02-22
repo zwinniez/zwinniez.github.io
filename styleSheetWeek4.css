@@ -1,8 +1,8 @@
 
 body {
-    background-image: url("seattle.jpg");
+    /* background-image: url("seattle.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     color: #ffffffce;
 }
 
@@ -16,8 +16,6 @@ body {
     position: absolute;
     top: 5%;
     left: 20%;
-    width: 50%;
-    height: auto;
 }
 
 .right_eye {
