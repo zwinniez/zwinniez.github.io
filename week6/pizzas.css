@@ -68,10 +68,38 @@ h3 {
 
 }
 
-a:link, a:visited {
-    color: #aa7555;  
+a {
+    color: white;  
 }
 
-a:hover {
-    color: #aa7555;
+
+
+
+/*daisy dilly*/
+.container { 
+    border: 20px solid black;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-evenly;
 }
+
+.flex_object { 
+    padding: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #aa7555;
+    margin: 20px;
+    flex: auto;
+    width: fit-content;
+
+    
+}
+
+#daisy_img {
+    max-width: 500px;
+}
+
+
+
