@@ -8,7 +8,9 @@
     src: url(Paskowy.ttf);
 }
 
-body {
+body { 
+    /*set background color of whole page,
+    font, and order of item placement*/
     font-family: pixelMix;
     color: white;
     background-color: black;
@@ -16,90 +18,82 @@ body {
 }
 
 h1 { 
+    /*barcode title */
     font-size: 100px;
     text-align: center;
     font-family: paskowy;
 }
 
 h3 {
+    /*back button and author names */
     margin-top: 10px;
     margin-left: 30px;
     font-size: 20px;
 }
 
-.textbox {
-    padding: 20px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #aa7555;
-    margin-top: 30px;
-    width: 400px;
-}
-
-.images {
-    position: absolute ;
-    top: auto;
-    padding: 20px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #aa7555;
-}
-
-#introduction1 {
-    position: absolute;
-    top: auto;
-    margin-left: 100px;
-}
-
-#image1 {
-    left: 600px;
-}
-
-#introduction2 {
-    position: absolute;
-    top: 700px;
-    left: 800px;
-}
-
-#image2 {
-    left: auto;
-    top: 700px;
-    margin-left: 100px;
-
-}
 
 a {
+    /*clickable link*/
     color: white;  
 }
 
-
-
-
-/*daisy dilly*/
+/* flex container */
 .container { 
     border: 20px solid black;
     padding: 50px;
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
-    justify-content: space-evenly;
+
+    flex-wrap: wrap; /*wrap text around to next row*/
+    align-content:flex-start; /*start from top of column*/
+
+    align-items:start;
+    justify-content:space-evenly;
 }
 
+
+/* flex object: children of container */
 .flex_object { 
+    align-self: center; /*center vertically on each row*/
+    flex-basis: 500px; /*row width*/
     padding: 20px;
     border-width: 8px;
     border-style: solid;
     border-color: #aa7555;
     margin: 20px;
-    flex: auto;
-    width: fit-content;
 
-    
 }
 
 #daisy_img {
     max-width: 500px;
 }
 
+/*special container for collage effect for daisy dilly page */
+.collage_container { 
+    border: 20px solid black;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
 
+    flex-wrap: wrap; /*wrap text around to next row*/
+    align-content:flex-start; /*center vertically*/
 
+    align-items:start;
+    justify-content:start;
+}
+
+.collage_flex_object { 
+    align-self: center; /*center vertically on each row*/
+    flex-basis: 1300px; /*row width*/
+    padding: 10px;
+    border-width: 4px;
+    border-style: double;
+    border-color: #ca9879;
+    margin: 10px;
+    max-width: 400px; 
+}
+
+h4 {
+    font-size: 30px;
+    text-align: center;
+} /*end of daisy dilly*/
