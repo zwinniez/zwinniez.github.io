@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: pixelMix;
     src: url(pixelmix.ttf);
@@ -16,20 +17,34 @@ body {
 }
 
 h1 { 
-    font-size: 100px;
+    position: relative; 
+    font-size: 180px;
+    padding: 20px;
+    border: 4px;
+    margin: 10px;
     text-align: center;
     font-family: paskowy;
 }
 
-h3 {
-    margin-top: 10px;
-    margin-left: 30px;
+h2 {
+    margin-bottom: 0px;
+    text-align: center;
     font-size: 20px;
+    padding: 0px;
+    border: 0px;
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    padding: 0px;
+    border: 0px;
 }
 
 .textbox {
     padding: 20px;
-    border-width: 8px;
+    border-width: 4px;
     border-style: solid;
     border-color: #aa7555;
     margin-top: 30px;
@@ -43,6 +58,20 @@ h3 {
     border-width: 8px;
     border-style: solid;
     border-color: #aa7555;
+    margin-bottom: 30px;
+}
+
+#midnight_text {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #aa7555;
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 600px;  
 }
 
 #introduction1 {
@@ -58,24 +87,51 @@ h3 {
 #introduction2 {
     position: absolute;
     top: 700px;
-    left: 800px;
+    margin-left: 100px;
 }
 
 #image2 {
     left: auto;
     top: 700px;
     margin-left: 100px;
+    margin-bottom: 400px;
+    z-index: 5;
 
 }
 
-a {
+#moiredef {
+    position: absolute;
+    top: 300px;
+    left: 850px;
+}
+
+#moire1 {
+    position: absolute;
+    top: 310px;
+    left: 150px;
+}
+
+#moire2 {
+    position: absolute;
+    padding: 20px;
+    top: 520px;
+    left: 350px;
+    z-index: -5;
+    margin-bottom: 400px;
+}
+
+a{
     color: white;  
+}
+
+a:hover {
+    color: #aa7555;
 }
 
 /*daisy dilly*/
 .container { 
-    border: 20px solid black;
-    padding: 50px;
+    border: 10px solid black;
+    padding: 20px;
     display: flex;
     flex-direction: row;
 
@@ -88,17 +144,29 @@ a {
 
 .flex_object { 
     align-self: center; /*center vertically on each row*/
-    flex-basis: 500px; /*row width*/
+    flex-basis: 600px; /*row width*/
     padding: 20px;
     border-width: 8px;
     border-style: solid;
     border-color: #aa7555;
+    margin: 10px;
+    width: 600px;
+}
+
+.flex_text {
+    align-self: center; /*center vertically on each row*/
+    font-size: 20px;
+    flex-basis: 600px; /*row width*/
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #aa7555;
     margin: 20px;
-    width: 500px;
+    width: 600px;  
 }
 
 #daisy_img {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .collage_container { 
