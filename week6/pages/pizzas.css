@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: pixelMix;
-    src: url(pixelmix.ttf);
+    src: url(../pixelmix.ttf);
 }
 
 @font-face {
     font-family: paskowy;
-    src: url(Paskowy.ttf);
+    src: url(../Paskowy.ttf);
 }
 
 body {
