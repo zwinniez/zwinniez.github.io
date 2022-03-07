@@ -8,9 +8,7 @@
     src: url(Paskowy.ttf);
 }
 
-body { 
-    /*set background color of whole page,
-    font, and order of item placement*/
+body {
     font-family: pixelMix;
     color: white;
     background-color: black;
@@ -18,26 +16,63 @@ body {
 }
 
 h1 { 
-    /*barcode title */
     font-size: 100px;
     text-align: center;
     font-family: paskowy;
 }
 
 h3 {
-    /*back button and author names */
     margin-top: 10px;
     margin-left: 30px;
     font-size: 20px;
 }
 
+.textbox {
+    padding: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #aa7555;
+    margin-top: 30px;
+    width: 400px;
+}
+
+.images {
+    position: absolute ;
+    top: auto;
+    padding: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #aa7555;
+}
+
+#introduction1 {
+    position: absolute;
+    top: auto;
+    margin-left: 100px;
+}
+
+#image1 {
+    left: 600px;
+}
+
+#introduction2 {
+    position: absolute;
+    top: 700px;
+    left: 800px;
+}
+
+#image2 {
+    left: auto;
+    top: 700px;
+    margin-left: 100px;
+
+}
 
 a {
-    /*clickable link*/
     color: white;  
 }
 
-/* flex container */
+/*daisy dilly*/
 .container { 
     border: 20px solid black;
     padding: 50px;
@@ -51,8 +86,6 @@ a {
     justify-content:space-evenly;
 }
 
-
-/* flex object: children of container */
 .flex_object { 
     align-self: center; /*center vertically on each row*/
     flex-basis: 500px; /*row width*/
@@ -68,7 +101,6 @@ a {
     max-width: 500px;
 }
 
-/*special container for collage effect for daisy dilly page */
 .collage_container { 
     border: 20px solid black;
     padding: 30px;
@@ -96,4 +128,6 @@ a {
 h4 {
     font-size: 30px;
     text-align: center;
-} /*end of daisy dilly*/
+}
+
+/*end of daisy dilly*/
