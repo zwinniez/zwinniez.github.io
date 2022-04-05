@@ -1,21 +1,22 @@
 
-let r = document.getElementById("red");
-let g = document.getElementById("green");
-let b = document.getElementById("blue");
-let theBody = document.querySelector("body");
-
-var randomColor = Math.floor(Math.random()*16777215).toString(16);
+let r = document.getElementById('red');
+let g = document.getElementById('green');
+let b = document.getElementById('blue');
+let theBody = document.querySelector('body');
 
 
 r.addEventListener('click', redButton);
-// green.addEventListener("click", greenButton);
-// blue.addEventListener("click", blueButton);
+g.addEventListener("click", greenButton);
+b.addEventListener('click', blueButton);
 
 function redButton(){
-    randomColor = Math.floor(Math.random()*16777215).toString(16);
-    
-    r.style.backgroundColor = randomColor;
-    console.log(randomColor);
+    document.body.style.backgroundImage = "url('red_room.gif')";
 }
 
+function blueButton() {
+    document.body.style.backgroundImage = "url('blue_room.gif')";
+}
 
+function greenButton() {
+    document.body.style.backgroundImage = "url('green_room.gif')";
+}
