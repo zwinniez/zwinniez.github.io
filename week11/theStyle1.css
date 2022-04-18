@@ -1,0 +1,92 @@
+body {
+    background-color: rgba(0,0,0);
+
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    text-align: center;
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.game_container {
+    background-color: rgb(14, 66, 163);
+    align-content: center;
+    width: 800px;
+    height:500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#status_bar {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1; 
+    grid-row-end: 2;
+
+    margin-top: 10px;
+}
+
+#status_bar > img {
+    height: 50%;
+}
+
+#ghost {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    animation: jump 2s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+#ghost > img {
+    height: 90%;
+}
+
+
+@keyframes jump {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+  }
+
+#text {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.action_buttons_container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#love > img {
+    width: 30%;
+}
+#chat > img {
+    width: 30%;
+}
+#music > img {
+    width: 30%;
+}
+
+
+

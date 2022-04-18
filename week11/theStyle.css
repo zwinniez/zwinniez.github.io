@@ -1,5 +1,13 @@
+@font-face {
+    font-family: ArcadeClassic;
+    src: url(assets/ARCADECLASSIC.TTF);
+}
+
 body {
+    
     background-color: rgba(0,0,0);
+
+    font-family: ArcadeClassic;
 
     color: white;
     display: flex;
@@ -12,18 +20,68 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 80px;
+    font-family: ArcadeClassic;
+    border: 0px;
+    padding: 0px;
+    margin: 20px;
 }
 
-.game_container {
-    background-color: rgb(14, 66, 163);
-    align-content: center;
+#game_container {  
+    background-image: url('assets/night.PNG');
+    background-size: 800px 500px; /*entire day night*/
+
     width: 800px;
-    height:500px;
+    height: 500px;
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+
+    position: relative;
+    top: 30px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
+}
+
+/* #time { 
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    z-index: -1;
+} */
+
+#clock {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    z-index: 4;
+}
+
+#clock > img {
+    height: 70%;
+}
+
+#textbox {
+    background-image: url("assets/textbox.png");
+    background-size: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+    
+    color: black;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    z-index: 1;
 }
 
 #status_bar {
@@ -31,8 +89,9 @@ h1 {
     grid-column-end: 4;
     grid-row-start: 1; 
     grid-row-end: 2;
-
-    margin-top: 10px;
+    
+    margin: 10px;
+    z-index: 4;
 }
 
 #status_bar > img {
@@ -40,8 +99,8 @@ h1 {
 }
 
 #ghost {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3.5;
     grid-row-start: 2;
     grid-row-end: 5;
 
@@ -52,8 +111,8 @@ h1 {
 
 #ghost > img {
     height: 90%;
+    z-index: 1;
 }
-
 
 @keyframes jump {
     0%   { transform: translateY(0); }
@@ -66,6 +125,9 @@ h1 {
     grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 6;
+
+    color: black;
+    font-family: ArcadeClassic;
 }
 
 .action_buttons_container {
@@ -87,6 +149,3 @@ h1 {
 #music > img {
     width: 30%;
 }
-
-
-

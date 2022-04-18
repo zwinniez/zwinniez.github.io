@@ -12,12 +12,16 @@
 
     <body>
         <main>
-            
-            <h1>Play with Boo!</h1>
+            <!-- the &nbsp; just adds an extra space since the font was getting smushed together -->
+            <h1>Play &nbsp;&nbsp;with &nbsp;&nbsp;Boo!</h1>
 
-            <div class = "game_container">
+            <div id = "game_container">
+                <!-- no idea why the status bar won't change to different color
+                     i tried using status & status_bar as two diff variables also 
+                -->
+
                 <div id = "status_bar">
-                    <img src = "assets/redbar.PNG">
+                    <img id = "status_img" src="assets/redbar.PNG">
                 </div>
 
                 <div id = "ghost">
@@ -25,18 +29,20 @@
                 </div>
 
 
+                <div id = "clock"><img src="assets/clock.PNG"></div>
+
                 <div class = 'action_buttons_container'>
                     <div id = "love"><img src="assets/heartbutton.PNG"></div>
                     <div id = "chat"><img src= "assets/chatbutton.PNG"></div>
                     <div id = "music"><img src = "assets/musicbutton.PNG"></div>
                 </div>
-
-                <div id = "text">TEXT</div>
+                <div id = "textbox"> Boo's &nbsp;&nbsp;feeling &nbsp;&nbsp;lonely. </div>
 
             </div>
 
-
-
+        </main>
+    </body>
+</html>
 
         </main>
     </body>
