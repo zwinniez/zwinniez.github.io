@@ -30,29 +30,32 @@ const statusAudio = new Audio("assets/statusbarUP.mp3");
 const booTalksAudio = new Audio("assets/bootalks.mp3");
 const heartAudio = new Audio("assets/heart.mp3");
 
-
+//ghost name
+//var ghost_name = 'MeiNa';
 
 /////////////////////////////////////////////////////////////////
 
 function upStatus() {
     statusCounter = statusCounter + 1;
+    let ghost_name = sessionStorage.getItem("ghost_name");
     if (statusCounter == 0 || statusCounter == 5 || statusCounter == 10 || statusCounter == 15) {
         statusAudio.play();
     }
     if (0 <= statusCounter && statusCounter <= 4) {
         $(status_img).attr("src", "assets/redbar.PNG");
+        $(textbox).html(ghost_name + "'s &nbsp;&nbsp;feeling &nbsp;&nbsp;lonely.");
 
     } else if (5 <= statusCounter && statusCounter <= 9) {
         $(status_img).attr("src", "assets/yellowbar.PNG");
-        $(textbox).html("Boo &nbsp;&nbsp;wants &nbsp;&nbsp;to &nbsp;&nbsp;play &nbsp;&nbsp;more!");
+        $(textbox).html(ghost_name + "&nbsp;&nbsp;wants &nbsp;&nbsp;to &nbsp;&nbsp;play &nbsp;&nbsp;more!");
 
     } else if (10 <= statusCounter && statusCounter <= 14) {
         $(status_img).attr("src", "assets/greenbar.PNG");
-        $(textbox).html("Boo &nbsp;&nbsp;is &nbsp;&nbsp;feeling &nbsp;&nbsp;happy!");
+        $(textbox).html(ghost_name + "&nbsp;&nbsp;is &nbsp;&nbsp;feeling &nbsp;&nbsp;happy!");
 
     } else {
         $(status_img).attr("src", "assets/2greenbar.PNG");
-        $(textbox).html("Boo &nbsp;&nbsp;loves &nbsp;&nbsp;your &nbsp;&nbsp;company!");
+        $(textbox).html(ghost_name + "Boo &nbsp;&nbsp;loves &nbsp;&nbsp;your &nbsp;&nbsp;company!");
 
     } 
 };
@@ -118,3 +121,19 @@ $(document).ready(function() {
     });
 });
 
+let submit_name = document.getElementById("name_form_submit");
+
+$(document).ready(function() {
+    $("#nameForm").submit(function() {
+
+        var ghost_name = $("#ghost_name").val();
+        alert(ghost_name);
+        sessionStorage.setItem("ghost_name", ghost_name);
+    })
+})
+
+$(document).ready(function() {
+    $(submit_name).click(function(){
+        window.location.href = "main.html";
+    })
+})
