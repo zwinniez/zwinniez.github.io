@@ -23,11 +23,22 @@ let clock = document.getElementById("clock");
 //body 
 let theBody = document.querySelector('body');
 
+
+//audio media
+const musicAudio = new Audio("assets/ES_Sunshine Song - The Waiting World.mp3");
+const statusAudio = new Audio("assets/statusbarUP.mp3");
+const booTalksAudio = new Audio("assets/bootalks.mp3");
+const heartAudio = new Audio("assets/heart.mp3");
+
+
+
 /////////////////////////////////////////////////////////////////
 
 function upStatus() {
     statusCounter = statusCounter + 1;
-
+    if (statusCounter == 0 || statusCounter == 5 || statusCounter == 10 || statusCounter == 15) {
+        statusAudio.play();
+    }
     if (0 <= statusCounter && statusCounter <= 4) {
         $(status_img).attr("src", "assets/redbar.PNG");
 
@@ -53,6 +64,7 @@ function resetStatus() {
 $(document).ready(function() {
     $(love).click(function() {
         $(ghost_img).attr("src", "assets/heartboo.PNG");
+        heartAudio.play();
         upStatus();
     });
     
@@ -61,22 +73,22 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(chat).click(function() {
         $(ghost_img).attr("src", "assets/chatboo.PNG");
+        booTalksAudio.play();
         upStatus();
     });
     
 });
 
-const audio = new Audio("assets/ES_Sunshine Song - The Waiting World.mp3");
 
 $(document).ready(function() {
     $(music).click(function() {
         $(ghost_img).attr("src", "assets/danceboo.PNG");
 
         // play or pause music by clicking on music
-        if (audio.paused) {
-            audio.play();
+        if (musicAudio.paused) {
+            musicAudio.play();
         } else {
-            audio.pause();
+            musicAudio.pause();
         }
 
         upStatus();
