@@ -1,5 +1,6 @@
 // ghost img 
 let ghost = document.getElementById('ghost');
+let ghost_run = document.getElementById('ghost_run');
 let ghost_img = document.getElementById("ghost_img");
 
 //text
@@ -23,9 +24,9 @@ let clock = document.getElementById("clock");
 //body 
 let theBody = document.querySelector('body');
 
-
 //audio media
 const musicAudio = new Audio("assets/ES_Sunshine Song - The Waiting World.mp3");
+musicAudio.volume = 0.2;
 const statusAudio = new Audio("assets/statusbarUP.mp3");
 const booTalksAudio = new Audio("assets/bootalks.mp3");
 const heartAudio = new Audio("assets/heart.mp3");
@@ -48,27 +49,47 @@ function upStatus() {
     } else if (5 <= statusCounter && statusCounter <= 9) {
         $(status_img).attr("src", "assets/yellowbar.PNG");
         $(textbox).html(ghost_name + "&nbsp;&nbsp;wants &nbsp;&nbsp;to &nbsp;&nbsp;play &nbsp;&nbsp;more!");
+        //setInterval(resetStatus, 5000);
 
-    } else if (10 <= statusCounter && statusCounter <= 14) {
+    } else if (10 <= statusCounter && statusCounter <= 14) {     
         $(status_img).attr("src", "assets/greenbar.PNG");
         $(textbox).html(ghost_name + "&nbsp;&nbsp;is &nbsp;&nbsp;feeling &nbsp;&nbsp;happy!");
+        //setInterval(resetStatus, 5000);
 
-    } else {
+    } else {       
         $(status_img).attr("src", "assets/2greenbar.PNG");
-        $(textbox).html(ghost_name + "Boo &nbsp;&nbsp;loves &nbsp;&nbsp;your &nbsp;&nbsp;company!");
-
+        $(textbox).html(ghost_name + " &nbsp;&nbsp;loves &nbsp;&nbsp;your &nbsp;&nbsp;company!");
+        //setInterval(resetStatus, 5000);
     } 
 };
 
 function resetStatus() {
     statusCounter = 0;
+    let ghost_name = sessionStorage.getItem("ghost_name");
+    if (statusCounter == 0) {
+        $(textbox).html("You&nbsp;&nbsp; can't&nbsp;&nbsp;touch &nbsp;&nbsp;" + ghost_name + "!");
+        $(status_img).attr("src", "assets/redbar.PNG");
+    }
+    //stop da music
+    if(musicAudio.played) {
+        musicAudio.pause();
+    }
 };
 
+//timer to reset status bar 
+statusInterval = setInterval(statusDown, 5000);
+function statusDown() {
+    statusCounter - 5;
+}
+
+//button functions 
 $(document).ready(function() {
     $(love).click(function() {
         $(ghost_img).attr("src", "assets/heartboo.PNG");
         heartAudio.play();
+        clearInterval(statusInterval);
         upStatus();
+        //setInterval(statusDown, 5000);
     });
     
 });
@@ -77,11 +98,12 @@ $(document).ready(function() {
     $(chat).click(function() {
         $(ghost_img).attr("src", "assets/chatboo.PNG");
         booTalksAudio.play();
+        clearInterval(statusInterval);
         upStatus();
+        //setInterval(statusDown, 5000);
     });
     
 });
-
 
 $(document).ready(function() {
     $(music).click(function() {
@@ -94,7 +116,11 @@ $(document).ready(function() {
             musicAudio.pause();
         }
 
+        //move back and forth
+
+        clearInterval(statusInterval);
         upStatus();
+        //setInterval(statusDown, 5000);
     });
     
 });
@@ -121,6 +147,8 @@ $(document).ready(function() {
     });
 });
 
+
+//user name input 
 let submit_name = document.getElementById("name_form_submit");
 
 $(document).ready(function() {
