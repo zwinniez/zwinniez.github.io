@@ -1,17 +1,99 @@
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
+#instructions {
+    font-size: 20px;
+    margin: 30px 40px;
+    text-align: center;
+}
+
+.timer {
+    display: inline-block;
+    max-width: 90%;
+    padding: 20px 40px;
+    border-radius: 30px;
+    background: #F4FCD9;
+
+}
+
+.timer_btns_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.num_timer {
+    display: flex;
+    justify-content: center;
+}
+
+.timer_numerical {
+    font-size: 58px;
+    font-weight: bold;
+}
+  
+.timer_btn {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #BB9981;
+    cursor: pointer;
+  }
+
+.timer_btn-start {
+    background: #534340;
+  }
+  
+.timer__btn-stop {
+    background: #312826;
+  }
+  
+  
+
+#timer_container {  
+    background-color: #C5D8A4;
+
+    width: 60%; /*center*/
+    height: 300px; /*center*/
+    margin: 40px auto; /*center*/
+    border-width: 20px solid #312826;
+    border-radius: 50px;
+    padding: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} 
+
+#log_container {
+    background-color: #def1bd;
+
+    width: 60%; /*center*/
+    height: 500px; /*center*/
+    margin: 40px auto; /*center*/
+    border-width: 20px solid #312826;
+    border-radius: 50px;
+    padding: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:#fcbce8;
-    font-family: 'Poppins', sans-serif;
+    background-color:#FFC4DD;
 }
 
 .logo {
@@ -65,7 +147,7 @@ nav {
         height: 92vh;
         top: 8vh;
         
-        background-color:#fcbce8;
+        background-color:#FFC4DD;
         
         display: flex;
         flex-direction : column;
@@ -111,26 +193,7 @@ nav {
 
 }
 
-#introduction {  
-    background-color: rgb(255, 255, 147);
-    background-image: url('assets/day.PNG');
-    background-image: url('assets/night.PNG');
-    
-    background-size: 800px 500px; /*entire day night
-    transition: background-image 20s ease-out; */
 
-    width: 800px;
-    height: 500px;
 
-    border-width: 10px;
-    border-style: solid;
-    border-color: white;
 
-    position: relative;
-    top: 30px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-} 
 
