@@ -73,7 +73,6 @@ class Timer {
         }
   });
 
-
     }
   
     updateInterfaceTime() {
@@ -146,3 +145,87 @@ class Timer {
       document.querySelector(".timer")
   );
 
+//inpsired by https://codepen.io/dcode-software/pen/XWgyOpg
+
+
+//for the to do list 
+const inputText = document.querySelector(".inputB input");
+const addButton = document.querySelector(".inputB button");
+let list = document.querySelector(".task_list");
+let deleteAll = document.querySelector(".comment button");
+let tasks = [];
+
+inputText.onkeyup = ()=>{
+  let userInput = inputText.value;//retrieve 
+  if(userInput.trim() != 0 ) {
+    addButton.classList.add("active");
+  } else {
+    addButton.classList.remove("active");
+  }
+}
+
+show_tasks();
+
+addButton.onclick = () => {
+    let userInput = inputText.value;//retrieve from input box
+    let storage = localStorage.getItem("Task");
+    if (storage == null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(storage); //json to js object
+    }
+      tasks.push(userInput); //adding new task to the list
+      localStorage.setItem("Task", JSON.stringify(tasks)); //back to json 
+      show_tasks(); //reshow array of tasks
+      addButton.classList.remove("active");
+}
+
+function show_tasks() {
+  let storage = localStorage.getItem("Task");
+  if (storage == null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(storage); //json to js object
+  }
+  let task_tag = '';
+  tasks.forEach((task, index) => {
+    task_tag += `<li> ${task} <span onclick="done_task(${index})" class='material-symbols-outlined'> remove</span></li>`;
+  });
+  list.innerHTML = task_tag;
+  inputText.value = '';
+}
+
+
+function done_task(index) {
+  let storage = localStorage.getItem("Task");
+  tasks = JSON.parse(storage);
+  tasks.splice(index, 1);
+  localStorage.setItem("Task", JSON.stringify(tasks));
+  show_tasks();
+}
+
+deleteAll.onclick = () => {
+  tasks = [];
+  localStorage.setItem("Task", JSON.stringify(tasks));
+  show_tasks();
+}
+
+
+//inspiration from tutorial on to do lists
+//https://www.youtube.com/watch?v=ykuD2QOZkhc&t=188s
+
+
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  let element = document.getElementById('embed-iframe');
+  let options = {
+      uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+    };
+  let callback = (EmbedController) => {};
+  IFrameAPI.createController(element, options, callback);
+};
+
+
+
+//for spotify iframe
+//https://developer.spotify.com/documentation/embeds/guides/using-the-iframe-api/

@@ -5,15 +5,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background: linear-gradient(to bottom, rgb(13, 2, 78) 0%, rgb(56, 52, 114) 100% );
+}
+
 #instructions {
     font-size: 20px;
-    margin: 30px 40px;
+    margin: 20px 40px 40px 20px;
     text-align: center;
 }
 
 .timer {
     display: inline-block;
-    max-width: 90%;
+    max-width: 95%;
     padding: 20px 40px;
     border-radius: 30px;
     background: #F4FCD9;
@@ -54,13 +58,12 @@
     background: #312826;
   }
   
-  
 
 #timer_container {  
-    background-color: #C5D8A4;
+    /*background-color: #C5D8A4;*/
 
     width: 60%; /*center*/
-    height: 300px; /*center*/
+    height: 250px; /*center*/
     margin: 40px auto; /*center*/
     border-width: 20px solid #312826;
     border-radius: 50px;
@@ -72,50 +75,189 @@
 
 } 
 
-#log_container {
-    background-color: #def1bd;
+#lower_container {
+    background-color: #C5D8A4;
 
-    width: 60%; /*center*/
-    height: 500px; /*center*/
+    width: 90%; /*center*/
+    height: 600px; /*center*/
     margin: 40px auto; /*center*/
     border-width: 20px solid #312826;
     border-radius: 50px;
     padding: 30px;
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 }
 
+#to_do_box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: inline-block;
+    max-width: 90%;
+    padding: 20px 40px;
+    border-radius: 30px;
+    background: #F4FCD9;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#to_do_box .inputB {
+
+    display : flex;
+    height: 45px;
+    width: 100%;
+}
+
+.inputB input{
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 20px;
+
+}
+
+.inputB button {
+    width: 60px;
+    height: 100%;
+    background: #faccdf;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border:none;
+    margin-left: 7px;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 0.1s ease;
+}
+
+.inputB button:hover, .comment button:hover {
+    background: pink;
+}
+
+.inputB button.active {
+    opacity: 1;
+    pointer-events:auto;
+}
+
+.task_list {
+    border-radius: 50px;
+    padding: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+    
+}
+
+.task_list li {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position:relative;
+    background: rgb(229, 245, 206);
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    font-size: 15px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.task_list li span {
+    position: absolute;
+    right: -45px;
+    color: white;
+    width: 45px;
+    height: 100%;
+    text-align: center;
+    background: #faccdf;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in;
+}
+
+.task_list li:hover span {
+    right: 0px;
+}
+
+.comment {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin: 0px 20px;
+    align-items: center;
+}
+
+.comment button {
+    background: #faccdf;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    border:none;
+    padding: 5px 10px;
+    margin-left: 7px;
+    
+}
+
+.waviy {
+    position: relative;
+    font-size: 30px;
+  }
+.waviy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+.waviy:hover {
+    animation: waviy 1s;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-10px)
+    }
+  }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:#FFC4DD;
+    background: #C5D8A4;
 }
 
 .logo {
-    color: rgb(255, 253, 253);
+    color: rgb(13, 2, 78);
     text-transform: uppercase;
     letter-spacing: 8px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .nav_links {
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 20%;
 }
 .nav_links li {
     list-style: none;
 }
 .nav_links a{
-    color: rgb(255, 255, 255);
+    color: rgb(13, 2, 78);
     text-decoration: none;
     letter-spacing: 4px;
-    font-weight: bold;
     font-size: 17px;
 }
 
