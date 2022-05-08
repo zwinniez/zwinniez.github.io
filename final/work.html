@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content = "user-scalable=no, width=device-width, inital-scale=1.0">
         <meta charset="utf-8">
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script> -->
         <link rel='stylesheet' type ='text/css' href='theStyle.css'>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="theMedium.js" type = "module" defer></script>
@@ -23,7 +23,7 @@
             <nav>
 
                 <div class = "logo">
-                    <div class ="waviy">
+                    <div class ="letter_jump">
                         <span style="--i:1">P</span>
                         <span style="--i:2">O</span>
                         <span style="--i:3">M</span>
@@ -41,15 +41,6 @@
                     <li><a href = "index.html">About</a></li>
                     <li><a href = "work.html">Work</a></li>
                 </ul>
-                <!-- change the size/color/arrangement of buttons 
-                what happens at 25 minutes
-
-                iframe for spotify/youtube music
-
-
-                when user clicks on study or break button, allow 
-                for two other buttons Y/N to pop up for confirmation
-             -->
 
                 <div class = "burger">
                     <div class="line1"></div>
@@ -59,7 +50,7 @@
                 </div>
             </nav>
 
-            
+            <div style= "background-image: url(background.jpeg); background-size: cover; background-repeat: no-repeat;">
             <div id="instructions">
                 <p style="color: rgb(250, 241, 225)">To get started, select a timer mode and click play.</p>
             </div>
@@ -81,12 +72,15 @@
                         </div>
                 </div>
 
-                <div id = "spotify">
-                    <iframe style="border-radius:30px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <div class = "spotify">
+                    <header>Choose a Playlist</header>
+                     <div class = "chillMix"><button>Chill Mix</button></div>
+                     <div class = "pianoMix"><button>Piano Mix</button></div>
+                     <div class = "rewindMix"><button>Rewind Mix</button></div>
                 </div>
             </div>
 
-            
+        </div>
 
 
         </main>

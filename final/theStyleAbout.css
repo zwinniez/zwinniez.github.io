@@ -19,37 +19,46 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    background: #C5D8A4;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(197,216,164,1) 35%, rgba(0,212,255,1) 100%);
+
 }
 
-.section2 {
+.section3 {
     height: 90vh;
     width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     overflow: hidden;
-    background: white;
+    background: rgb(13, 2, 78);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(252,143,225);
+    background: linear-gradient(346deg, rgba(252,143,225,1) 0%, rgba(197,216,164,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.section3 h2 {
+    margin: 30px;
 }
 
 
-.waviy {
+.letter_jump {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 60px;
 }
-.waviy span {
+.letter_jump span {
   position: relative;
   display: inline-block;
   color: #fff;
   text-transform: uppercase;
-  animation: waviy 1s infinite;
+  animation: letter_jump 1s infinite;
   animation-delay: calc(.1s * var(--i));
   
 }
-@keyframes waviy {
+
+@keyframes letter_jump {
   0%,40%,100% {
     transform: translateY(0)
   }
@@ -117,8 +126,7 @@ nav {
         height: 92vh;
         top: 8vh;
         
-        background-color: #C5D8A4;
-        
+        background-color:#FFC4DD;
         
         display: flex;
         flex-direction : column;
@@ -163,9 +171,3 @@ nav {
     transform: rotate(45deg) translate(-5px,-5px);
 
 }
-
-
-
-
-
-

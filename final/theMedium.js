@@ -21,16 +21,10 @@ const navSlide = ()=> {
 
 }
 
-// const app = ()=> {
-//     navSlide
-// }
 
 navSlide();
 
 // inpsiration from https://www.youtube.com/watch?v=gXkqy0b4M5g
-
-
-
 
 class Timer {
     constructor(root) {
@@ -45,11 +39,11 @@ class Timer {
       };
   
       this.interval = null;
-      this.remainingSeconds = 25 * 60;
+      this.remainingSeconds = 25 * 60; //set up automatically 25 minutes for pomodoro study session
   
       this.el.control.addEventListener("click", () => {
         if (this.interval === null) {
-          this.start();
+          this.start(); //when timer button click, start timer
         } else {
           this.stop();
         }
@@ -75,7 +69,7 @@ class Timer {
 
     }
   
-    updateInterfaceTime() {
+    updateInterfaceTime() { //update every second
       const minutes = Math.floor(this.remainingSeconds / 60);
       const seconds = this.remainingSeconds % 60;
   
@@ -95,7 +89,7 @@ class Timer {
       }
     }
   
-    start() {
+    start() { //initiate the thread 
       if (this.remainingSeconds === 0) return;
   
       this.interval = setInterval(() => {
@@ -109,14 +103,14 @@ class Timer {
       this.updateInterfaceControls();
     }
   
-    stop() {
+    stop() { //reset timer 
       clearInterval(this.interval);
       this.interval = null;
       this.updateInterfaceControls();
     }
   
     //starts with 25 automatically for pomodoro
-    static getHTML() { 
+    static getHTML() {  
       return `
 
             <div class = "num_timer">
@@ -130,11 +124,11 @@ class Timer {
               <button type="button" class="timer_btn timer_btn-control timer_btn-start">
                 <span class="material-icons">play_arrow</span>
               </button>
-              <button type="button" class="timer_btn timer_btn-restart">
-                <span class="material-icons">timer</span>
+              <button type="button" class="timer_btn timer_btn-restart" style="font-size: 10px">
+                <span class="material-icons">timer</span>Study
               </button>
-              <button type="button" class="timer_btn timer_btn-break">
-                <span class="material-symbols-outlined">coffee</span>
+              <button type="button" class="timer_btn timer_btn-break" style='font-size: 11px'>
+                <span class="material-symbols-outlined">coffee</span>Break
               </button>
               </div>
           `;
@@ -195,15 +189,6 @@ function show_tasks() {
   inputText.value = '';
 }
 
-
-function done_task(index) {
-  let storage = localStorage.getItem("Task");
-  tasks = JSON.parse(storage);
-  tasks.splice(index, 1);
-  localStorage.setItem("Task", JSON.stringify(tasks));
-  show_tasks();
-}
-
 deleteAll.onclick = () => {
   tasks = [];
   localStorage.setItem("Task", JSON.stringify(tasks));
@@ -214,8 +199,6 @@ deleteAll.onclick = () => {
 //inspiration from tutorial on to do lists
 //https://www.youtube.com/watch?v=ykuD2QOZkhc&t=188s
 
-
-
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
   let element = document.getElementById('embed-iframe');
   let options = {
@@ -225,7 +208,30 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
   IFrameAPI.createController(element, options, callback);
 };
 
-
-
-//for spotify iframe
+//for spotify API iframe
 //https://developer.spotify.com/documentation/embeds/guides/using-the-iframe-api/
+
+let chillMix = document.querySelector(".chillMix button");
+let pianoMix = document.querySelector(".pianoMix button");
+let rewindMix = document.querySelector(".rewindMix button");
+let spotifyIframe = document.querySelector(".spotify");
+
+
+chillMix.onclick = () => {
+  
+  let newIframe = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EVHGWrwldPRtj?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+  spotifyIframe.innerHTML = newIframe;
+
+}
+
+pianoMix.onclick = () => {
+  let newIframe = `<iframe style="border-radius:30px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+  spotifyIframe.innerHTML = newIframe;
+}
+
+rewindMix.onclick = () => {
+  let newIframe = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXpyNlpWQwux?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+  spotifyIframe.innerHTML = newIframe;
+  console.log(backButton);
+}
+

@@ -6,7 +6,8 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(13, 2, 78) 0%, rgb(56, 52, 114) 100% );
+    background-color: rgb(13, 2, 78);
+    /* linear-gradient(to bottom, rgb(13, 2, 78) 0%, rgb(56, 52, 114) 100% ); */
 }
 
 #instructions {
@@ -20,8 +21,7 @@ body {
     max-width: 95%;
     padding: 20px 40px;
     border-radius: 30px;
-    background: #F4FCD9;
-
+    background: rgb(197,216,164);
 }
 
 .timer_btns_container {
@@ -76,8 +76,9 @@ body {
 } 
 
 #lower_container {
-    background-color: #C5D8A4;
-
+    
+    background: rgb(197,216,164);
+    background: radial-gradient(circle, rgba(197,216,164,1) 50%, rgba(154,233,249,1) 100%);
     width: 90%; /*center*/
     height: 600px; /*center*/
     margin: 40px auto; /*center*/
@@ -178,11 +179,6 @@ body {
     background: #faccdf;
     cursor: pointer;
 
-    transition: all 0.1s ease-in;
-}
-
-.task_list li:hover span {
-    right: 0px;
 }
 
 .comment {
@@ -206,30 +202,25 @@ body {
     
 }
 
-.waviy {
+.letter_jump {
     position: relative;
     font-size: 30px;
   }
-.waviy span {
+.letter_jump span {
     position: relative;
     display: inline-block;
-    color: #fff;
-    text-transform: uppercase;
+    color: white;
   }
 
-.waviy:hover {
-    animation: waviy 1s;
+.letter_jump:hover {
+    animation: letter_jump 1s;
     animation-delay: calc(.1s * var(--i));
 }
 
-@keyframes waviy {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-10px)
-    }
-  }
+@keyframes letter_jump {
+    0%,40%,100% {transform: translateY(0)}
+    20% {transform: translateY(-10px)}
+}
 
 nav {
     display: flex;
@@ -335,6 +326,34 @@ nav {
 
 }
 
+
+.spotify {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    max-width: 95%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #F4FCD9;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify button {
+    width: 150px;
+    background: pink;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+
+}
 
 
 
