@@ -1,24 +1,20 @@
-
-body {
-    background-color:#0a4e32da;
-    color: #ffffffce;
-    
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-#author {
-    
-    font-size: 20px;
-    font-family:'Optima', sans-serif;
-    text-align: right;
+body {
+    background: linear-gradient(rgba(197,216,164,1) 50%, rgba(0,212,255,1) 100%);
+
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
     width: 80%;
-    position: fixed;
-    top: 0;
-    
-    font-family:'Optima', sans-serif;
-    font-size: 35px;
+    position: relative;
+    font-size: 40px;
     color: #ffffffce;
     text-align: left;
 
@@ -31,28 +27,30 @@ body {
     border-bottom: 5px solid #82ecc077;
 }
 
-.content-container {
-    padding: 15px 30px;
-    margin-top: 250px;
-    
-    height: 600px;
+.section {
+    height: 80%;
+    max-height: 500px;
+    width: 100%;
     overflow-y: scroll;
-    scroll-behavior: smooth;
-
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+.section h4 {
+    margin: 30px;
+    font-size: 30px;
 }
 
-.content-scroll-page {
-    display: flex;
-    height: 70%;
-    font-family: 'Optima', sans-serif;
-    font-size: 25px;
-    color: #ffffffce;
-    text-align: left;
+
+#author {
     
-    padding-left: 50px;
-    border-left: 5px dotted #82ecc077;
+    font-size: 25px;
+    text-align: right;
 }
-
 
 
 a:link, a:visited {
@@ -64,3 +62,5 @@ a:link, a:visited {
 a:hover {
     color: #7ad6c2ce;
 }
+
+    
